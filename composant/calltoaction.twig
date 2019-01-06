@@ -1,0 +1,20 @@
+ <!-- ***** CTA Area Start ***** -->
+    <section class="our-monthly-membership section_padding_50 clearfix">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    {% setcontent cta = 'cta/1' %}
+                    <div class="membership-description">
+                        <h2>{{ cta.title }}</h2>
+                        <p>{{ cta.content }}</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="get-started-button wow bounceInDown" data-wow-delay="0.5s">
+                        <a href="{{ cta.link_button }}">{{ cta.title_button }}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** CTA Area End ***** -->

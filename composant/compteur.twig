@@ -1,0 +1,37 @@
+<!-- ***** Cool Facts Area Start ***** -->
+    <section class="cool_facts_area clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Section Heading Area -->
+                    <div class="section-heading text-center">
+                        {% setcontent compteur = 'compteurs/2' %}
+                        <h2 style="color: white">{{ compteur.title }}</h2>
+                        <div class="line-shape"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <!-- App Screenshots Slides  -->                
+                    {% setcontent compteur = 'compteurs/latest/25' %}
+                
+                    <div class="app_screenshots_slides owl-carousel">
+                        {% for compteur in compteur %}
+                        <div class="single-shot">
+                            <img src="files/{{ compteur.image }}" alt=""width="100" height="100">
+                        </div>
+                        {% endfor %}
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+              
+                </div>
+            </div>
+       
+    </section>
+    <!-- ***** Cool Facts Area End ***** -->

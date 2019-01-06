@@ -1,0 +1,39 @@
+<!-- ***** Our Team Area Start ***** -->
+    <section class="our-Team-area bg-white section_padding_100_50 clearfix" id="team">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <!-- Heading Text  -->
+                    <div class="section-heading">
+                        <h2>Notre bubulle team</h2>
+                        <div class="line-shape"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                {% setcontent team = 'teams/latest/2' %}
+                {% for team in team %}
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div class="single-team-member">
+                        <div class="member-image">
+                            <img src="files/{{ team.image }}" alt="">
+                            <div class="team-hover-effects">
+                                <div class="team-social-icon">
+                                    <a href="{{ team.link_facebook }}"><i class="{{ team.icon_facebook }}" aria-hidden="true"></i></a>
+                                    <a href="{{ team.link_twitter }}"><i class="{{ team.icon_twitter }}" aria-hidden="true"></i></a>
+                                    <a href="{{ team.link_google }}"><i class="{{ team.icon_google }}" aria-hidden="true"></i></a>
+                                    <a href="{{ team.link_instagram }}"> <i class="{{ team.icon_instagram }}" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-text">
+                            <h4>{{ team.title_block }}</h4>
+                            <p>{{ team.subtitle_block }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <!-- ***** Our Team Area End ***** -->

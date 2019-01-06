@@ -1,0 +1,34 @@
+   <div class="row no-gutters bg-white">
+       <div class="col-12 col-md-12 col-lg-2">
+       </div>
+       {% setcontent tarif = 'web/latest/6' %}
+       {% for tarif in tarif %}
+                <div class="col-12 col-md-12 col-lg-2">
+                    <!-- Package Price  -->
+                    
+                    <div class="single-price-plan text-center">
+                        <!-- Package Text  -->
+                        <div class="package-plan">
+                            <h5>{{ tarif.title }}</h5>
+                            <div class="ca-price d-flex justify-content-center">
+                                <span>$</span>
+                                <h4>{{ tarif.tarif }}</h4>
+                            </div>
+                        </div>
+                        <div class="package-description">
+                            <p>{{ tarif.desc_1 }}</p>
+                            <p>{{ tarif.desc_2 }}</p>
+                            <p>{{ tarif.desc_3 }}</p>
+                            <p>{{ tarif.desc_4 }}</p>
+                            <p>{{ tarif.desc_5 }}</p>
+                        </div>
+                        <!-- Plan Button  -->
+                        <div class="plan-button">
+                            <a href="{{ tarif.link_button }}">{{ tarif.title_button }}</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+      
+            </div>
+       

@@ -1,0 +1,90 @@
+
+        <!-- Special Description Area -->
+        <div class="special_description_area bg-white">
+            <div class="container col-12">
+                    {% setcontent pack = 'entreprise/latest/8' %}
+		               {% for pack in pack | sort('desc') %}
+    
+               {% if loop.index is odd %}
+                <div class="row">
+                
+       
+                    <div class="col-12 col-md-6 col-lg-6 " style="background-image: url('files/{{ pack.image }}'); height: 700px; width: 100%; background-size: cover;">
+                      {#  <div class="special_description_img">
+                            <img src="files/1.jpg" alt="">
+                        </div> #}
+                    </div>
+                    <div class="col-12 col-md-1 col-lg-1">
+                    </div>
+                   <div class="col-12 col-md-4 col-lg-4 m-auto-jm">
+                    <!-- Package Price  -->
+                    <div class="single-price-plan text-center">
+                        <!-- Package Text  -->
+                        <div class="package-plan">
+                            <h5>{{ pack.title }}</h5>
+                            <div class="ca-price d-flex justify-content-center">
+                                <span>€</span>
+                                <h4>{{ pack.tarif }}</h4>
+                            </div>
+                        </div>
+                        <div class="package-description">
+                            <p>{{ pack.desc_1|striptags }}</p>
+                            <p>{{ pack.desc_2|striptags }}</p>
+                            <p>{{ pack.desc_3|striptags }}</p>
+                            <p>{{ pack.desc_4|striptags }}</p>
+                            <p>{{ pack.desc_5|striptags }}</p>
+                        </div>
+                        <!-- Plan Button  -->
+                        <div class="plan-button">
+                            <a href="{{ pack.link_button }}">{{ pack.title_button }}</a>
+                        </div>
+                    </div>
+                    
+                </div>
+                    <div class="col-12 col-md-1 col-lg-1">
+                    </div>
+                </div>
+                    
+                    {% else %}
+                         <div class="row">
+                    <div class="col-12 col-md-1 col-lg-1">
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-4 m-auto-jm">
+                    <!-- Package Price  -->
+                    <div class="single-price-plan text-center">
+                        <!-- Package Text  -->
+                        <div class="package-plan">
+                            <h5>{{ pack.title }}</h5>
+                            <div class="ca-price d-flex justify-content-center">
+                                <span>€</span>
+                                <h4>{{ pack.tarif }}</h4>
+                            </div>
+                        </div>
+                        <div class="package-description">
+                            <p>{{ pack.desc_1|striptags }}</p>
+                            <p>{{ pack.desc_2|striptags }}</p>
+                            <p>{{ pack.desc_3|striptags }}</p>
+                            <p>{{ pack.desc_4|striptags }}</p>
+                            <p>{{ tarif.desc_5|striptags }}</p>
+                        </div>
+                        <!-- Plan Button  -->
+                        <div class="plan-button">
+                            <a href="{{ pack.link_button }}">{{ pack.title_button }}</a>
+                        </div>
+                    </div>
+                    
+                </div>
+                             <div class="col-12 col-md-1 col-lg-1">
+                    </div>
+                             <div class="col-12 col-md-6 col-lg-6 " style="background-image: url('files/{{ pack.image }}'); height: 700px; width: 100%; background-size: cover;">
+                      {#  <div class="special_description_img">
+                            <img src="files/1.jpg" alt="">
+                        </div> #}
+                    </div>
+                </div>
+                    {% endif %}
+                   {% endfor %}	    
+            </div>
+        </div>
+    </section>
+    <!-- ***** Special Area End ***** -->

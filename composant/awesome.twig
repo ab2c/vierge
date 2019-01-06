@@ -1,0 +1,32 @@
+<!-- ***** Awesome Features Start ***** -->
+    <section class="awesome-feature-area bg-white section_padding_0_50 clearfix" id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Heading Text -->
+                    <div class="section-heading text-center">
+                        {% setcontent awesome = 'awesome/1' %}
+                        <h2>{{ awesome.title }}</h2>
+                        <div class="line-shape"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Single Feature Start -->
+                {% setcontent awesome = 'awesome/latest/6' %}
+                {% for awesome in awesome %}
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-feature">
+                        <i class="{{ awesome.icon }}" aria-hidden="true"></i>
+                        <h5>{{ awesome.title_content }}</h5>
+                        <p>{{ awesome.content }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+                <!-- Single Feature Start -->
+               
+            </div>
+
+        </div>
+    </section>

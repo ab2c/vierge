@@ -1,0 +1,27 @@
+    <section class="wellcome_area clearfix bg-white" id="home">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12 col-md-12">
+                    <div class="wellcome-heading">
+                        {% setcontent header = 'headers/1' %}
+                        <h2>{{ header.title }}</br> {{ header.title_2 }}</h2>
+                        <h3>{{ header.title_fond }}</h3>
+                        <p>{{ header.content }}</p>
+                    </div>
+                    <div class="get-start-area">
+                        <!-- Form Start -->
+                        <form action="{{ header.link_button }}" method="post" class="form-inline">
+                            <input type="email" class="form-control email" placeholder="{{ header.content_button }}">
+                            <input type="submit" class="submit" value="{{ header.title_button }}">
+                        </form>
+                        <!-- Form End -->
+                    </div>
+                </div>
+                     <div class="welcome-thumb wow fadeInDown col-12 " data-wow-delay="0.5s">
+            <img src="public/files/{{ header.image }}" alt="">
+        </div>    
+            </div>
+        </div>
+        <!-- Welcome thumb -->
+       
+    </section>
